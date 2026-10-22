@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.ikerf.tiendainstrumentos.gui.Ventana">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="center:d:noGrow"/>
+    <colspec value="fill:116px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:107px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:114px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:96px:noGrow"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="38a91" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Tipo de instrumento"/>
+        </properties>
+      </component>
+      <component id="dda57" class="javax.swing.JRadioButton" binding="vientoRadioButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Viento"/>
+        </properties>
+      </component>
+      <component id="ad87" class="javax.swing.JRadioButton" binding="percusionRadioButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Percusion"/>
+        </properties>
+      </component>
+      <component id="20bc1" class="javax.swing.JRadioButton" binding="cuerdaRadioButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Cuerda"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
