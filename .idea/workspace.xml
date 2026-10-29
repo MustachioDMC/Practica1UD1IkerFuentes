@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16fcc0b3-167d-45be-b674-c1d5593fb641" name="Default Changelist" comment="" />
+    <list default="true" id="16fcc0b3-167d-45be-b674-c1d5593fb641" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/instrumentos.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TiendaInstrumentos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1UD1IkerFuentes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Cuerda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Cuerda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Instrumento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Instrumento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Percusion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Percusion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Viento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Viento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/Ventana.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/Ventana.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/jgoodies-forms-1.8.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VehiculosMVC" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -45,6 +60,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ikerf.tiendainstrumentos.Principal" />
+      <module name="Practica1UD1IkerFuentes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ikerf.tiendainstrumentos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Principal" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -55,7 +90,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1792652977916</updated>
-      <workItem from="1792652981316" duration="3105000" />
+      <workItem from="1792652981316" duration="3115000" />
+      <workItem from="1792735526963" duration="28000" />
+      <workItem from="1793259415707" duration="8822000" />
+      <workItem from="1793285039789" duration="3955000" />
     </task>
     <servers />
   </component>
@@ -67,7 +105,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

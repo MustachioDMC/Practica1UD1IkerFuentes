@@ -5,6 +5,8 @@ import java.time.LocalDate;
 public class Instrumento {
     private String nombre;
     private String marca;
+    private String colorPrincipal;
+    private int numStock;
     private double precio;
     private LocalDate fechaCreacion;
 
@@ -12,9 +14,11 @@ public class Instrumento {
 
     }
 
-    public Instrumento(String nombre, String marca, double precio, LocalDate fechaCreacion) {
+    public Instrumento(String nombre, String marca, String colorPrincipal,int numStock, double precio, LocalDate fechaCreacion) {
         this.nombre = nombre;
         this.marca = marca;
+        this.colorPrincipal=colorPrincipal;
+        this.numStock=numStock;
         this.precio = precio;
         this.fechaCreacion = fechaCreacion;
     }
@@ -49,5 +53,21 @@ public class Instrumento {
 
     public void setFechaCreacion(LocalDate fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
+    }
+
+    public int getNumStock() {
+        return numStock;
+    }
+
+    public void setNumStock(int numStock) {
+        this.numStock = numStock;
+    }
+
+    public String getColorPrincipal() {
+        return colorPrincipal;
+    }
+
+    public void setColorPrincipal(String colorPrincipal) {
+        this.colorPrincipal = colorPrincipal;
     }
 }

@@ -2,7 +2,29 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.ikerf.tiendainstrumentos.gui.Ventana">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
     <rowspec value="center:d:noGrow"/>
-    <colspec value="fill:116px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <colspec value="fill:153px:noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:107px:noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
@@ -10,9 +32,12 @@
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:96px:noGrow"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="513" height="436"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-8517376"/>
+      <foreground color="-2040064"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="38a91" class="javax.swing.JLabel">
@@ -21,6 +46,8 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Magneto"/>
+          <foreground color="-4482196"/>
           <text value="Tipo de instrumento"/>
         </properties>
       </component>
@@ -30,6 +57,8 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Magneto"/>
+          <foreground color="-8780613"/>
           <text value="Viento"/>
         </properties>
       </component>
@@ -39,6 +68,9 @@
           <forms/>
         </constraints>
         <properties>
+          <enabled value="true"/>
+          <font name="Magneto"/>
+          <foreground color="-8780613"/>
           <text value="Percusion"/>
         </properties>
       </component>
@@ -48,7 +80,223 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Magneto"/>
+          <foreground color="-8780613"/>
           <text value="Cuerda"/>
+        </properties>
+      </component>
+      <component id="c87e8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font name="Magneto"/>
+          <foreground color="-8219268"/>
+          <text value="Nombre"/>
+        </properties>
+      </component>
+      <component id="6af96" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font name="Magneto"/>
+          <foreground color="-8219268"/>
+          <text value="Marca"/>
+        </properties>
+      </component>
+      <component id="30fec" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font name="Magneto"/>
+          <foreground color="-8219268"/>
+          <text value="Precio"/>
+        </properties>
+      </component>
+      <component id="dd958" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font name="Magneto"/>
+          <foreground color="-8219268"/>
+          <text value="Fecha de Creacion"/>
+        </properties>
+      </component>
+      <component id="6c60f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font name="Magneto"/>
+          <foreground color="-8219268"/>
+          <text value="Color Principal"/>
+        </properties>
+      </component>
+      <component id="b3647" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font name="Magneto"/>
+          <foreground color="-8219268"/>
+          <text value="Stock"/>
+        </properties>
+      </component>
+      <component id="97525" class="javax.swing.JLabel" binding="lblBDC">
+        <constraints>
+          <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font name="Magneto"/>
+          <foreground color="-8219268"/>
+          <text value="Boquilla"/>
+        </properties>
+      </component>
+      <component id="39d87" class="javax.swing.JButton" binding="exportarButton" default-binding="true">
+        <constraints>
+          <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Papyrus"/>
+          <foreground color="-5765695"/>
+          <text value="Exportar"/>
+        </properties>
+      </component>
+      <component id="9db61" class="javax.swing.JButton" binding="importarButton" default-binding="true">
+        <constraints>
+          <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Papyrus"/>
+          <foreground color="-5765695"/>
+          <hideActionText value="true"/>
+          <text value="Importar"/>
+        </properties>
+      </component>
+      <scrollpane id="d2b9a">
+        <constraints>
+          <grid row="16" column="2" row-span="7" col-span="5" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="aa85d" class="javax.swing.JList" binding="list1" default-binding="true">
+            <constraints/>
+            <properties>
+              <font name="Segoe UI Black"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="d11ca" class="javax.swing.JTextField" binding="nombreTXT">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font name="Segoe UI Black"/>
+        </properties>
+      </component>
+      <component id="a103a" class="javax.swing.JTextField" binding="marcaTXT">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font name="Segoe UI Black"/>
+        </properties>
+      </component>
+      <component id="c9f1d" class="javax.swing.JTextField" binding="colorPrincipalTXT">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font name="Segoe UI Black"/>
+        </properties>
+      </component>
+      <component id="d72f4" class="javax.swing.JSpinner" binding="StockSpinner">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font name="Segoe UI Black"/>
+        </properties>
+      </component>
+      <component id="f1f19" class="javax.swing.JTextField" binding="precioTXT">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font name="Segoe UI Black"/>
+        </properties>
+      </component>
+      <component id="96b28" class="javax.swing.JTextField" binding="bdcTXT">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font name="Segoe UI Black"/>
+        </properties>
+      </component>
+      <component id="a02e9" class="com.github.lgooddatepicker.components.DatePicker" binding="fechaCeacionDatePicker">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="ff033" class="javax.swing.JButton" binding="borrarButton" default-binding="true">
+        <constraints>
+          <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <enabled value="true"/>
+          <font name="Papyrus"/>
+          <foreground color="-5765695"/>
+          <text value="Borrar"/>
+        </properties>
+      </component>
+      <component id="a5bf8" class="javax.swing.JButton" binding="nuevoButton" default-binding="true">
+        <constraints>
+          <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Papyrus"/>
+          <foreground color="-5765695"/>
+          <text value="Nuevo"/>
         </properties>
       </component>
     </children>
