@@ -22,6 +22,7 @@ public class Cuerda extends Instrumento {
         this.numeroCuerdas = numeroCuerdas;
     }
     public String toString() {
-        return "Cuerda{ " + getNombre() + " " + getMarca() + " " + getColorPrincipal () + " " + getNumStock () + " " + getPrecio() + " " + getFechaCreacion() + " " + getNumeroCuerdas () + " }";
+        return "Cuerda{ " + getNombre() + " " + getMarca() + " " + getColorPrincipal () + " "
+                + getNumStock () + " " + getPrecio() + " " + getFechaCreacion() + " " + getNumeroCuerdas () + " }";
     }
 }

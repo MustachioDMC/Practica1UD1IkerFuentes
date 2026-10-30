@@ -22,6 +22,7 @@ public class Percusion extends Instrumento {
         this.dificultad = dificultad;
     }
     public String toString() {
-        return "Percusion{ " + getNombre() + " " + getMarca() + " " + getColorPrincipal () + " " + getNumStock () + " " + getPrecio() + " " + getFechaCreacion() + " " + getDificultad () + " }";
+        return "Percusion{ " + getNombre() + " " + getMarca() + " " + getColorPrincipal () + " "
+                + getNumStock () + " " + getPrecio() + " " + getFechaCreacion() + " " + getDificultad () + " }";
     }
 }

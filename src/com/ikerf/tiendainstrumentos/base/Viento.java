@@ -24,6 +24,7 @@ public class Viento extends Instrumento {
 
     @Override
     public String toString() {
-        return "Viento{ " + getNombre() + " " + getMarca() + " " + getColorPrincipal () + " " + getNumStock () + " " + getPrecio() + " " + getFechaCreacion() + " " + getTipoBoquilla () + " }";
+        return "Viento{ " + getNombre() + " " + getMarca() + " " + getColorPrincipal () + " "
+                + getNumStock () + " " + getPrecio() + " " + getFechaCreacion() + " " + getTipoBoquilla () + " }";
     }
 }
