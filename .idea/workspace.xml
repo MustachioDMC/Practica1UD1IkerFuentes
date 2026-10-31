@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="16fcc0b3-167d-45be-b674-c1d5593fb641" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Cuerda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Cuerda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Percusion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/base/Percusion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoModelo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +82,8 @@
       <workItem from="1793259415707" duration="8822000" />
       <workItem from="1793285039789" duration="4130000" />
       <workItem from="1793383630858" duration="5988000" />
-      <workItem from="1793470394824" duration="5923000" />
+      <workItem from="1793470394824" duration="6044000" />
+      <workItem from="1793487683194" duration="28000" />
     </task>
     <servers />
   </component>
