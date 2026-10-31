@@ -5,6 +5,10 @@ import java.time.LocalDate;
 public class Cuerda extends Instrumento {
     private int numeroCuerdas;
 
+    public Cuerda(){
+        super();
+    }
+
     public Cuerda(int numeroCuerdas) {
         this.numeroCuerdas = numeroCuerdas;
     }

@@ -5,6 +5,10 @@ import java.time.LocalDate;
 public class Percusion extends Instrumento {
     private String dificultad;
 
+    public Percusion(){
+        super();
+    }
+
     public Percusion(String dificultad) {
         this.dificultad = dificultad;
     }

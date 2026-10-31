@@ -4,10 +4,8 @@ import com.ikerf.tiendainstrumentos.base.Cuerda;
 import com.ikerf.tiendainstrumentos.base.Instrumento;
 import com.ikerf.tiendainstrumentos.base.Percusion;
 import com.ikerf.tiendainstrumentos.base.Viento;
-import org.w3c.dom.DOMImplementation;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Text;
+import org.w3c.dom.*;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,6 +14,7 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -129,6 +128,52 @@ public class InstrumentoModelo {
         Transformer transformer= TransformerFactory.newInstance ().newTransformer ();
         transformer.transform (source,resultado);
     }
+    public void importarXML(File fichero) throws ParserConfigurationException, IOException, SAXException {
+        listaInstrumentos=new ArrayList<Instrumento> ();
+        Viento nuevoViento= null;
+        Percusion nuevoPercusion= null;
+        Cuerda nuevaCuerda= null;
+        DocumentBuilderFactory factory= DocumentBuilderFactory.newInstance ();
+        DocumentBuilder builder= factory.newDocumentBuilder ();
+        Document documento= builder.parse (fichero);
 
+        NodeList listaElementos = documento.getElementsByTagName ("*");
+        for (int i=0; i<listaElementos.getLength (); i++){
+            Element nodoInstrumento = (Element) listaElementos.item (i);
+
+            if (nodoInstrumento.getTagName ().equals ("Viento")){
+                nuevoViento=new Viento ();
+                nuevoViento.setNombre (nodoInstrumento.getChildNodes ().item (0).getTextContent ());
+                nuevoViento.setMarca (nodoInstrumento.getChildNodes ().item (1).getTextContent ());
+                nuevoViento.setColorPrincipal (nodoInstrumento.getChildNodes ().item (2).getTextContent ());
+                nuevoViento.setNumStock (Integer.parseInt (nodoInstrumento.getChildNodes ().item (3).getTextContent ()));
+                nuevoViento.setPrecio (Double.parseDouble (nodoInstrumento.getChildNodes ().item (4).getTextContent ()));
+                nuevoViento.setFechaCreacion ( LocalDate.parse (nodoInstrumento.getChildNodes ().item (5).getTextContent ()));
+                nuevoViento.setTipoBoquilla (nodoInstrumento.getChildNodes ().item (6).getTextContent ());
+                listaInstrumentos.add (nuevoViento);
+            }else if(nodoInstrumento.getTagName ().equals ("Percusion")){
+                nuevoPercusion=new Percusion ();
+                nuevoPercusion.setNombre (nodoInstrumento.getChildNodes ().item (0).getTextContent ());
+                nuevoPercusion.setMarca (nodoInstrumento.getChildNodes ().item (1).getTextContent ());
+                nuevoPercusion.setColorPrincipal (nodoInstrumento.getChildNodes ().item (2).getTextContent ());
+                nuevoPercusion.setNumStock (Integer.parseInt (nodoInstrumento.getChildNodes ().item (3).getTextContent ()));
+                nuevoPercusion.setPrecio (Double.parseDouble (nodoInstrumento.getChildNodes ().item (4).getTextContent ()));
+                nuevoPercusion.setFechaCreacion ( LocalDate.parse (nodoInstrumento.getChildNodes ().item (5).getTextContent ()));
+                nuevoPercusion.setDificultad (nodoInstrumento.getChildNodes ().item (6).getTextContent ());
+                listaInstrumentos.add (nuevoPercusion);
+            }else{
+                nuevaCuerda=new Cuerda ();
+                nuevaCuerda.setNombre (nodoInstrumento.getChildNodes ().item (0).getTextContent ());
+                nuevaCuerda.setMarca (nodoInstrumento.getChildNodes ().item (1).getTextContent ());
+                nuevaCuerda.setColorPrincipal (nodoInstrumento.getChildNodes ().item (2).getTextContent ());
+                nuevaCuerda.setNumStock (Integer.parseInt (nodoInstrumento.getChildNodes ().item (3).getTextContent ()));
+                nuevaCuerda.setPrecio (Double.parseDouble (nodoInstrumento.getChildNodes ().item (4).getTextContent ()));
+                nuevaCuerda.setFechaCreacion ( LocalDate.parse (nodoInstrumento.getChildNodes ().item (5).getTextContent ()));
+                nuevaCuerda.setNumStock (Integer.parseInt (nodoInstrumento.getChildNodes ().item (6).getTextContent ()));
+                listaInstrumentos.add (nuevaCuerda);
+            }
+        }
+
+    }
 
 }

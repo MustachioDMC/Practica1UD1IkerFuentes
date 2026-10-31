@@ -1,6 +1,7 @@
 package com.ikerf.tiendainstrumentos.gui;
 
 import com.ikerf.tiendainstrumentos.base.Instrumento;
+import util.Util;
 
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -29,7 +30,7 @@ public class InstrumentoControlador implements ActionListener, ListSelectionList
         addWindowListener(this);
     }
 
-    private boolean hayCamposVacions(){
+    private boolean hayCamposVacios(){
         if(ventana.nombreTXT.getText ().isEmpty () || ventana.marcaTXT.getText ().isEmpty() || ventana.colorPrincipalTXT.getText ().isEmpty() ||
                 ventana.StockSpinner.getValue ().equals (0) ||  ventana.marcaTXT.getText ().isEmpty() || ventana.precioTXT.getText ().isEmpty() ||
                 ventana.fechaCeacionDatePicker.getText ().isEmpty() ||  ventana.bdcTXT.getText ().isEmpty()){
@@ -51,7 +52,7 @@ public class InstrumentoControlador implements ActionListener, ListSelectionList
 
     public void refrescar(){
         ventana.dlmIntrumento.clear ();
-        for(Instrumento unInstrumento : modelo.obtenerIntrumento()){
+        for(Instrumento unInstrumento:modelo.obtenerInstrumento ()){
             ventana.dlmIntrumento.addElement (unInstrumento);
         }
     }
@@ -88,7 +89,40 @@ public class InstrumentoControlador implements ActionListener, ListSelectionList
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String actionCommand = e.getActionCommand ();
 
+        switch (actionCommand){
+            case "Nuevo":
+                if(hayCamposVacios ()) {
+                    Util.mensajeError ("Tienen que estar todos los campos rellenados");
+                    break;
+                }
+                if (!modelo.hayStock ((Integer) ventana.StockSpinner.getValue ())) {
+                    Util.mensajeError ("Tiene que haber stock si no pa que lo pones");
+                }
+                if (ventana.vientoRadioButton.isSelected ()){
+                    modelo.altaViento (ventana.nombreTXT.getText (),ventana.marcaTXT.getText (),ventana.colorPrincipalTXT.getText (), Integer.parseInt ((String) ventana.StockSpinner.getValue ()),
+                             Double.parseDouble ( ventana.precioTXT.getText ()), ventana.fechaCeacionDatePicker.getDate (),ventana.bdcTXT.getText ());
+                }else if (ventana.percusionRadioButton.isSelected ()){
+                    modelo.altaPercusion (ventana.nombreTXT.getText (),ventana.marcaTXT.getText (),ventana.colorPrincipalTXT.getText (), Integer.parseInt ((String) ventana.StockSpinner.getValue ()),
+                            Double.parseDouble ( ventana.precioTXT.getText ()), ventana.fechaCeacionDatePicker.getDate (),ventana.bdcTXT.getText ());
+                }else{
+                    try {
+                        int bdc = Integer.parseInt (ventana.bdcTXT.getText ( ));
+                        modelo.altaCuerda (ventana.nombreTXT.getText ( ), ventana.marcaTXT.getText ( ), ventana.colorPrincipalTXT.getText ( ), Integer.parseInt ((String) ventana.StockSpinner.getValue ( )),
+                                Double.parseDouble (ventana.precioTXT.getText ( )), ventana.fechaCeacionDatePicker.getDate ( ),bdc );
+                    }catch (NumberFormatException ex){
+                        Util.mensajeError ("No puede contener texto. Solo numeros");
+                    }
+                    }
+                break;
+            case "Importar":
+                break;
+            case "Exportar":
+                break;
+            case "Borrar":
+                break;
+        }
     }
 
     @Override
