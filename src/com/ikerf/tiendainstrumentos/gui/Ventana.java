@@ -4,6 +4,7 @@ import com.github.lgooddatepicker.components.DatePicker;
 import com.ikerf.tiendainstrumentos.base.Instrumento;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Ventana {
     public JPanel panel1;
@@ -30,14 +31,36 @@ public class Ventana {
     public Ventana() {
         frame = new JFrame ("Ventana");
         frame.setContentPane (panel1);
-        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation (JFrame.DO_NOTHING_ON_CLOSE);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.pack ( );
         frame.setVisible (true);
-        initComponents();
+        initComponents ( );
+        cambiarFuente(panel1, 30);
+    }
+    private void cambiarFuente(Component componente, int tamano) {
+        componente.setFont(
+                componente.getFont().deriveFont((float) tamano)
+        );
+
+        if (componente instanceof Container) {
+            Container contenedor = (Container) componente;
+
+            for (Component hijo : contenedor.getComponents()) {
+                cambiarFuente(hijo, tamano);
+            }
+        }
     }
 
     private void initComponents() {
-        dlmIntrumento= new DefaultListModel<Instrumento> ();
+        dlmIntrumento = new DefaultListModel<Instrumento> ( );
         list1.setModel (dlmIntrumento);
+        nombreTXT.setPreferredSize(new java.awt.Dimension(250, 35));
+        marcaTXT.setPreferredSize(new java.awt.Dimension(250, 35));
+        colorPrincipalTXT.setPreferredSize(new java.awt.Dimension(250, 35));
+        precioTXT.setPreferredSize(new java.awt.Dimension(250, 35));
+        bdcTXT.setPreferredSize(new java.awt.Dimension(250, 35));
+        StockSpinner.setPreferredSize(new java.awt.Dimension(100, 35));
+        list1.setFont(list1.getFont().deriveFont(18f));
     }
 }

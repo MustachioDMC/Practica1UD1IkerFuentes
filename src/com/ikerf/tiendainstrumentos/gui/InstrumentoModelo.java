@@ -37,96 +37,89 @@ public class InstrumentoModelo {
         Cuerda unCuerda= new Cuerda (nombre,marca,colorPrincipal,stock,precio,fechaCreacion,numCuerdas);
         listaInstrumentos.add (unCuerda);
     }
-    public boolean hayStock(int numStock){
-        for(Instrumento unInstrumento: listaInstrumentos){
-            if(unInstrumento.getNumStock ()==0){
-                return false;
-            }
-        }
-        return true;
+    public void borrarLista(){
+        listaInstrumentos.clear ();
     }
-    public void exportarXML (File fichero) throws ParserConfigurationException, TransformerException {
-        DocumentBuilderFactory factory= DocumentBuilderFactory.newInstance ();
-        DocumentBuilder builder= factory.newDocumentBuilder ();
-        DOMImplementation dom= builder.getDOMImplementation ();
-        Document documento= dom.createDocument ( null, "xml", null);
+    public boolean hayStock(int numStock) {
+        return numStock > 0;
+    }
+    public void exportarXML(File fichero) throws ParserConfigurationException, TransformerException {
 
-        Element raiz=documento.createElement ("instrumentos");
-        documento.getDocumentElement ().appendChild (raiz);
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        DOMImplementation dom = builder.getDOMImplementation();
 
-        Element nodoInstrumento=null;
-        Element nodoDatos=null;
-        Text texto= null;
+        Document documento = dom.createDocument(null, "xml", null);
 
-        for(Instrumento unInstrumento: listaInstrumentos){
-            if(unInstrumento instanceof Viento){
-                nodoInstrumento=documento.createElement ("Viento");
-            }else if(unInstrumento instanceof Percusion){
-                nodoInstrumento=documento.createElement ("Percusion");
-            }else{
-                nodoInstrumento=documento.createElement ("Cuerda");
+        Element raiz = documento.createElement("instrumentos");
+        documento.getDocumentElement().appendChild(raiz);
+
+        Element nodoInstrumento = null;
+        Element nodoDatos = null;
+        Text texto = null;
+
+        for (Instrumento unInstrumento : listaInstrumentos) {
+            if (unInstrumento instanceof Viento) {
+                nodoInstrumento = documento.createElement("Viento");
+            } else if (unInstrumento instanceof Percusion) {
+                nodoInstrumento = documento.createElement("Percusion");
+            } else {
+                nodoInstrumento = documento.createElement("Cuerda");
             }
-            raiz.appendChild (nodoInstrumento);
-            nodoDatos=documento.createElement ("nombre");
-            nodoInstrumento.appendChild (nodoDatos);
-            texto=documento.createTextNode (unInstrumento.getNombre ());
-            nodoDatos.appendChild (texto);
+            raiz.appendChild(nodoInstrumento);
 
-            raiz.appendChild (nodoInstrumento);
-            nodoDatos=documento.createElement ("marca");
-            nodoInstrumento.appendChild (nodoDatos);
-            texto=documento.createTextNode (unInstrumento.getMarca ());
-            nodoDatos.appendChild (texto);
+            nodoDatos = documento.createElement("nombre");
+            nodoInstrumento.appendChild(nodoDatos);
+            texto = documento.createTextNode(unInstrumento.getNombre());
+            nodoDatos.appendChild(texto);
 
-            raiz.appendChild (nodoInstrumento);
-            nodoDatos=documento.createElement ("color-principal");
-            nodoInstrumento.appendChild (nodoDatos);
-            texto=documento.createTextNode (unInstrumento.getColorPrincipal ());
-            nodoDatos.appendChild (texto);
+            nodoDatos = documento.createElement("marca");
+            nodoInstrumento.appendChild(nodoDatos);
+            texto = documento.createTextNode(unInstrumento.getMarca());
+            nodoDatos.appendChild(texto);
 
-            raiz.appendChild (nodoInstrumento);
-            nodoDatos=documento.createElement ("stock");
-            nodoInstrumento.appendChild (nodoDatos);
-            texto=documento.createTextNode (String.valueOf (unInstrumento.getNumStock ()));
-            nodoDatos.appendChild (texto);
+            nodoDatos = documento.createElement("color-principal");
+            nodoInstrumento.appendChild(nodoDatos);
+            texto = documento.createTextNode(unInstrumento.getColorPrincipal());
+            nodoDatos.appendChild(texto);
 
-            raiz.appendChild (nodoInstrumento);
-            nodoDatos=documento.createElement ("precio");
-            nodoInstrumento.appendChild (nodoDatos);
-            texto=documento.createTextNode (unInstrumento.getNombre ());
-            nodoDatos.appendChild (texto);
+            nodoDatos = documento.createElement("stock");
+            nodoInstrumento.appendChild(nodoDatos);
+            texto = documento.createTextNode(String.valueOf(unInstrumento.getNumStock()));
+            nodoDatos.appendChild(texto);
 
-            raiz.appendChild (nodoInstrumento);
-            nodoDatos=documento.createElement ("fecha-creacion");
-            nodoInstrumento.appendChild (nodoDatos);
-            texto=documento.createTextNode (unInstrumento.getFechaCreacion ().toString ());
-            nodoDatos.appendChild (texto);
+            nodoDatos = documento.createElement("precio");
+            nodoInstrumento.appendChild(nodoDatos);
+            texto = documento.createTextNode(String.valueOf(unInstrumento.getPrecio()));
+            nodoDatos.appendChild(texto);
 
-            if(unInstrumento instanceof Viento){
-                raiz.appendChild (nodoInstrumento);
-                nodoDatos=documento.createElement ("boquilla");
-                nodoInstrumento.appendChild (nodoDatos);
-                texto=documento.createTextNode (((Viento) unInstrumento).getTipoBoquilla ());
-                nodoDatos.appendChild (texto);
-            } else if(unInstrumento instanceof Percusion){
-                raiz.appendChild (nodoInstrumento);
-                nodoDatos=documento.createElement ("dificultad");
-                nodoInstrumento.appendChild (nodoDatos);
-                texto=documento.createTextNode (((Percusion) unInstrumento).getDificultad ());
-                nodoDatos.appendChild (texto);
-            } else{
-                raiz.appendChild (nodoInstrumento);
-                nodoDatos=documento.createElement ("numero-cuerdas");
-                nodoInstrumento.appendChild (nodoDatos);
-                texto=documento.createTextNode (String.valueOf (((Cuerda)unInstrumento).getNumeroCuerdas ()));
-                nodoDatos.appendChild (texto);
+            nodoDatos = documento.createElement("fecha-creacion");
+            nodoInstrumento.appendChild(nodoDatos);
+            texto = documento.createTextNode(unInstrumento.getFechaCreacion().toString());
+            nodoDatos.appendChild(texto);
+
+            if (unInstrumento instanceof Viento) {
+                nodoDatos = documento.createElement("boquilla");
+                nodoInstrumento.appendChild(nodoDatos);
+                texto = documento.createTextNode(((Viento) unInstrumento).getTipoBoquilla());
+                nodoDatos.appendChild(texto);
+            } else if (unInstrumento instanceof Percusion) {
+                nodoDatos = documento.createElement("dificultad");
+                nodoInstrumento.appendChild(nodoDatos);
+                texto = documento.createTextNode(((Percusion) unInstrumento).getDificultad());
+                nodoDatos.appendChild(texto);
+            } else {
+                nodoDatos = documento.createElement("numero-cuerdas");
+                nodoInstrumento.appendChild(nodoDatos);
+                texto = documento.createTextNode(String.valueOf(((Cuerda) unInstrumento).getNumeroCuerdas()));
+                nodoDatos.appendChild(texto);
             }
         }
 
-        Source source = new DOMSource (documento);
-        Result resultado = new StreamResult (fichero);
-        Transformer transformer= TransformerFactory.newInstance ().newTransformer ();
-        transformer.transform (source,resultado);
+        Source source = new DOMSource(documento);
+        Result resultado = new StreamResult(fichero);
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        transformer.transform(source, resultado);
     }
     public void importarXML(File fichero) throws ParserConfigurationException, IOException, SAXException {
         listaInstrumentos=new ArrayList<Instrumento> ();
@@ -161,7 +154,7 @@ public class InstrumentoModelo {
                 nuevoPercusion.setFechaCreacion ( LocalDate.parse (nodoInstrumento.getChildNodes ().item (5).getTextContent ()));
                 nuevoPercusion.setDificultad (nodoInstrumento.getChildNodes ().item (6).getTextContent ());
                 listaInstrumentos.add (nuevoPercusion);
-            }else{
+            } else if (nodoInstrumento.getTagName().equals("Cuerda")) {
                 nuevaCuerda=new Cuerda ();
                 nuevaCuerda.setNombre (nodoInstrumento.getChildNodes ().item (0).getTextContent ());
                 nuevaCuerda.setMarca (nodoInstrumento.getChildNodes ().item (1).getTextContent ());
