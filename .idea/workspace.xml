@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="16fcc0b3-167d-45be-b674-c1d5593fb641" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/Ventana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculos.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumentos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/instrumentos.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoControlador.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +93,7 @@
       <workItem from="1793550407883" duration="13395000" />
       <workItem from="1793634967762" duration="67000" />
       <workItem from="1793635117401" duration="16000" />
+      <workItem from="1793656147111" duration="152000" />
     </task>
     <servers />
   </component>

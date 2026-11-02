@@ -90,7 +90,7 @@ public class InstrumentoControlador implements ActionListener, ListSelectionList
     private void guardarDatosConfiguracion() throws IOException {
         Properties configuracion = new Properties();
         configuracion.setProperty("ultimaRutaExportada",ultimaRutaExportada.getAbsolutePath());
-        configuracion.store(new PrintWriter ("vehiculos.conf"),"Datos configuracion instrumentos");
+        configuracion.store(new PrintWriter ("instrumentos.conf"),"Datos configuracion instrumentos");
     }
 
 
