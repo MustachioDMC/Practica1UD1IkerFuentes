@@ -34,6 +34,7 @@ public class Ventana {
         frame.setDefaultCloseOperation (JFrame.DO_NOTHING_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.pack ( );
+        frame.setResizable (false);
         frame.setVisible (true);
         initComponents ( );
         cambiarFuente(panel1, 30);
