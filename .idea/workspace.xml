@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Practica1UD1IkerFuentes:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="16fcc0b3-167d-45be-b674-c1d5593fb641" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Practica1UD1IkerFuentes_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instrumentos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/instrumentos.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikerf/tiendainstrumentos/gui/InstrumentoControlador.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,12 +30,13 @@
   <component name="ProjectId" id="3L2X8arH40iFLEy5LAbukp2bHDF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -94,6 +100,7 @@
       <workItem from="1793634967762" duration="67000" />
       <workItem from="1793635117401" duration="16000" />
       <workItem from="1793656147111" duration="152000" />
+      <workItem from="1793656505727" duration="1357000" />
     </task>
     <servers />
   </component>
